@@ -7,7 +7,8 @@ const jsonServer = require('json-server');
 const config = require('./json-server.json');
 
 /** Middlewares. */
-const auth = require('./auth-basic.js');
+const auth = require('./auth-basic');
+const accessLevels = require('./access-levels.js');
 const routes = require('./routes.js');
 
 /**
@@ -36,7 +37,7 @@ module.exports = (source, options) => {
   server.use(jsonServer.defaults(options));
 
   // Add custom middlewares.
-  server.use(auth);
+  server.use(accessLevels(auth));
   server.use(routes);
 
   // Start server.
