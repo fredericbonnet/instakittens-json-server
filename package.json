@@ -12,7 +12,7 @@
     "url": "https://github.com/fredericbonnet/instakittens-json-server.git"
   },
   "scripts": {
-    "start": "json-server --watch db.json",
+    "start": "node init.js",
     "watch": "nodemon -x npm start"
   },
   "dependencies": {

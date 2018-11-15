@@ -1,6 +1,4 @@
 {
   "port": 3000,
-  "foreignKeySuffix": "_id",
-  "routes": "routes.json",
-  "middlewares": ["./auth-basic.js"]
+  "foreignKeySuffix": "_id"
 }
