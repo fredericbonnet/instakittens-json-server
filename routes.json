@@ -1,0 +1,8 @@
+{
+  "/users/:userId/comments/:commentId": "/comments/:commentId",
+  "/users/:userId/albums/:albumId": "/albums/:albumId",
+  "/users/:userId/albums/:albumId/photos": "/albums/:albumId/photos",
+  "/users/:userId/albums/:albumId/photos/:photoId": "/photos/:photoId",
+  "/users/:userId/albums/:albumId/photos/:photoId/comments": "/photos/:photoId/comments",
+  "/users/:userId/albums/:albumId/photos/:photoId/comments/:commentsId": "/comments/:commentsId"
+}
