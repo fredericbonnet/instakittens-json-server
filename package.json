@@ -12,9 +12,18 @@
     "url": "https://github.com/fredericbonnet/instakittens-json-server.git"
   },
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "json-server --watch db.json",
+    "watch": "nodemon -x npm start"
   },
   "dependencies": {
     "json-server": "^0.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "db.json"
+    ]
   }
 }
