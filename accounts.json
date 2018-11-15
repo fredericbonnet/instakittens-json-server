@@ -1,0 +1,127 @@
+[
+  {
+    "username": "admin",
+    "password": "cdI6bUeeOIkHbXN",
+    "role": "admin"
+  },
+  {
+    "userId": 1,
+    "username": "Brook.Hudson",
+    "password": "GAfJ8cFYg2J1SdS",
+    "role": "user"
+  },
+  {
+    "userId": 2,
+    "username": "Jessie.Heidenreich",
+    "password": "ivfg8IcfRad9776",
+    "role": "user"
+  },
+  {
+    "userId": 3,
+    "username": "Miller.Thompson",
+    "password": "TjQKpXAylw4CUTE",
+    "role": "user"
+  },
+  {
+    "userId": 4,
+    "username": "Paula.Rath",
+    "password": "0jnmxirtvTrgzYn",
+    "role": "user"
+  },
+  {
+    "userId": 5,
+    "username": "Delpha.Ernser",
+    "password": "wScKZpejHEwdg_7",
+    "role": "user"
+  },
+  {
+    "userId": 6,
+    "username": "Santos.Hegmann",
+    "password": "VsKLKDNhsbtx8Kq",
+    "role": "user"
+  },
+  {
+    "userId": 7,
+    "username": "Lue.Steuber",
+    "password": "wSoogPcdP528zsc",
+    "role": "user"
+  },
+  {
+    "userId": 8,
+    "username": "Kiel.Lakin",
+    "password": "QdR3S4HMA_Hd8rk",
+    "role": "user"
+  },
+  {
+    "userId": 9,
+    "username": "Willard.Kessler",
+    "password": "1GOKKYSZtMpqhUF",
+    "role": "user"
+  },
+  {
+    "userId": 10,
+    "username": "Andre.Hodkiewicz",
+    "password": "003I0dw4df_wQtQ",
+    "role": "user"
+  },
+  {
+    "userId": 11,
+    "username": "Christina.DuBuque",
+    "password": "wchuGghUy1kEaRj",
+    "role": "user"
+  },
+  {
+    "userId": 12,
+    "username": "Delilah.Lang",
+    "password": "v1yAypeyN5N57dw",
+    "role": "user"
+  },
+  {
+    "userId": 13,
+    "username": "Wilmer.McClure",
+    "password": "0bBppS2CPk7CzKR",
+    "role": "user"
+  },
+  {
+    "userId": 14,
+    "username": "Jennings.McClure",
+    "password": "9uYE57mj_nURc38",
+    "role": "user"
+  },
+  {
+    "userId": 15,
+    "username": "Amy.Dickinson",
+    "password": "W6zN20l1D4r2b1B",
+    "role": "user"
+  },
+  {
+    "userId": 16,
+    "username": "Kariane.Frami",
+    "password": "B98rdLClTceTn83",
+    "role": "user"
+  },
+  {
+    "userId": 17,
+    "username": "Bertrand.Bayer",
+    "password": "rCeu7TRQx_M5Gys",
+    "role": "user"
+  },
+  {
+    "userId": 18,
+    "username": "Fabian.Treutel",
+    "password": "CEz1ar1wjKAN7jS",
+    "role": "user"
+  },
+  {
+    "userId": 19,
+    "username": "Nicklaus.Hilll",
+    "password": "QFLRbsTo2TVNzBN",
+    "role": "user"
+  },
+  {
+    "userId": 20,
+    "username": "Creola.Renner",
+    "password": "iqmBD1RTakuauu1",
+    "role": "user"
+  }
+]
