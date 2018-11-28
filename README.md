@@ -16,3 +16,10 @@ Generator](https://github.com/fredericbonnet/instakittens-data-generator).
 ## REST API server
 
 Powered by [JSON Server](https://github.com/typicode/json-server).
+
+## Tests
+
+- Test framework: [Mocha](https://mochajs.org/)
+- Assertion library: [Chai](https://www.chaijs.com/)
+- E2E testing: [Supertest](https://github.com/visionmedia/supertest)
+- Mocking: [Sinon](https://sinonjs.org/), [Sinon-Chai](https://github.com/domenic/sinon-chai), [node-mocks-http](https://github.com/howardabrams/node-mocks-http), [mock-require](https://github.com/boblauer/mock-require)

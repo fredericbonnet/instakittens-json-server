@@ -16,7 +16,9 @@
     "start:fresh": "node init.js --fresh",
     "watch": "nodemon -x npm run start:fresh",
     "test": "mocha",
-    "test:watch": "mocha -w"
+    "test:watch": "mocha -w",
+    "e2e": "mocha --opts e2e/mocha.opts --exit",
+    "e2e:watch": "mocha --opts e2e/mocha.opts -w"
   },
   "dependencies": {
     "base-64": "^0.1.0",
@@ -24,12 +26,14 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-exclude": "^1.0.11",
     "mocha": "^5.2.0",
     "mock-require": "^3.0.2",
     "node-mocks-http": "^1.7.3",
     "nodemon": "^1.18.6",
     "sinon": "^7.1.1",
-    "sinon-chai": "^3.2.0"
+    "sinon-chai": "^3.2.0",
+    "supertest": "^3.3.0"
   },
   "nodemonConfig": {
     "ignore": [
