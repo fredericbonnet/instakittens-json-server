@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "node init.js",
-    "watch": "nodemon -x npm start",
+    "start:fresh": "node init.js --fresh",
+    "watch": "nodemon -x npm run start:fresh",
     "test": "mocha",
     "test:watch": "mocha -w"
   },
