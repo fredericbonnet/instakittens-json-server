@@ -21,7 +21,10 @@ describe('Nested resources', () => {
   let adminHeaders;
 
   before(() => {
+    // Create requester with API root URL.
     request = supertest(global.url);
+
+    // Get accounts and authorization headers.
     userAccount = getAccount('user');
     adminAccount = getAccount('admin');
     userHeaders = {

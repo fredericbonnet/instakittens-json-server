@@ -15,7 +15,7 @@ if (args.includes('--fresh')) {
 
 const server = require('./server');
 
-server(source).then(listener => {
+server(source).then(({ listener }) => {
   const url = `http://localhost:${listener.address().port}`;
   console.log(`Server listening on ${url}`);
 });

@@ -18,7 +18,7 @@ const routes = require('./routes.js');
  * @param {*} source Source DB (JSON file, JS module, object...)
  * @param {*} options JSON-Server options
  *
- * @returns Promise with the server listener
+ * @returns Promise with the server listener and the JSON-server router
  */
 module.exports = (source, options) => {
   // Create server app.
@@ -47,7 +47,7 @@ module.exports = (source, options) => {
 
   return new Promise(resolve => {
     const listener = server.listen(config.port, () => {
-      resolve(listener);
+      resolve({ listener, router });
     });
   });
 };

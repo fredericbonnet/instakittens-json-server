@@ -35,8 +35,9 @@ mockRequire('../json-server.json', config);
 // (Re)start server.
 const server = require('../server.js');
 if (global.listener) global.listener.close();
-server(source, { logger: false }).then(listener => {
+server(source, { logger: false }).then(({ listener, router }) => {
   global.listener = listener;
+  global.router = router;
 
   const url = `http://localhost:${listener.address().port}`;
   console.log(`E2E test server listening on ${url}`);

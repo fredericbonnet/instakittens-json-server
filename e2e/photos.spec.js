@@ -19,7 +19,10 @@ describe('Photos', () => {
   let adminHeaders;
 
   before(() => {
+    // Create requester with API root URL.
     request = supertest(global.url);
+
+    // Get accounts and authorization headers.
     userAccount = getAccount('user');
     adminAccount = getAccount('admin');
     userHeaders = {
@@ -28,6 +31,9 @@ describe('Photos', () => {
     adminHeaders = {
       authorization: buildHeader(adminAccount.username, adminAccount.password),
     };
+
+    // Deactivate stale resource deletion for faster rollback.
+    global.router.db._.mixin({ getRemovable: () => [] });
   });
 
   describe('GET /photos', () => {
