@@ -3,20 +3,13 @@ const chaiExclude = require('chai-exclude');
 chai.use(chaiExclude);
 const { expect } = chai;
 const supertest = require('supertest');
-const { buildHeader, getRandomElement, getAccount } = require('./utils');
-
-/** Get photo list */
-function getPhotoList() {
-  return global.db.photos;
-}
-
-/** Get photo */
-function getPhoto(id) {
-  // JSON stringify/parse is the simplest way to deep clone an object.
-  return JSON.parse(
-    JSON.stringify(global.db.photos.find(photo => photo.id == id))
-  );
-}
+const {
+  buildHeader,
+  getRandomElement,
+  getAccount,
+  getPhotoList,
+  getPhoto,
+} = require('./utils');
 
 describe('Photos', () => {
   let request;

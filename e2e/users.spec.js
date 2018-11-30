@@ -3,20 +3,13 @@ const chaiExclude = require('chai-exclude');
 chai.use(chaiExclude);
 const { expect } = chai;
 const supertest = require('supertest');
-const { buildHeader, getRandomElement, getAccount } = require('./utils');
-
-/** Get user list */
-function getUserList() {
-  return global.db.users;
-}
-
-/** Get user */
-function getUser(id) {
-  // JSON stringify/parse is the simplest way to deep clone an object.
-  return JSON.parse(
-    JSON.stringify(global.db.users.find(user => user.id == id))
-  );
-}
+const {
+  buildHeader,
+  getRandomElement,
+  getAccount,
+  getUserList,
+  getUser,
+} = require('./utils');
 
 describe('Users', () => {
   let request;
@@ -395,7 +388,7 @@ describe('Users', () => {
         .set(userHeaders)
         .expect(403);
     });
-    it('should delete user in private mode', async function() {
+    it('should delete user in private mode', async () => {
       const userId = userAccount.userId;
       const url = '/users/' + userId;
       const userData = getUser(userId);
