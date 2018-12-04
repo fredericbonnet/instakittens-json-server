@@ -31,9 +31,6 @@ describe('Albums', () => {
     adminHeaders = {
       authorization: buildHeader(adminAccount.username, adminAccount.password),
     };
-
-    // Deactivate stale resource deletion for faster rollback.
-    global.router.db._.mixin({ getRemovable: () => [] });
   });
 
   describe('GET /albums', () => {

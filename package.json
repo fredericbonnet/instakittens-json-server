@@ -18,7 +18,9 @@
     "test": "mocha",
     "test:watch": "mocha -w",
     "e2e": "mocha --opts e2e/mocha.opts --exit",
-    "e2e:watch": "mocha --opts e2e/mocha.opts -w"
+    "e2e:watch": "mocha --opts e2e/mocha.opts -w",
+    "cucumber": "cucumber-js",
+    "cucumber:watch": "nodemon -e js,feature -x npm run cucumber"
   },
   "dependencies": {
     "base-64": "^0.1.0",
@@ -27,6 +29,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-exclude": "^1.0.11",
+    "cucumber": "^5.0.2",
     "mocha": "^5.2.0",
     "mock-require": "^3.0.2",
     "node-mocks-http": "^1.7.3",
