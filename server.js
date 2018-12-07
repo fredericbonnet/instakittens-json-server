@@ -10,6 +10,7 @@ const config = require('./json-server.json');
 const auth = require('./auth-basic');
 const accessLevels = require('./access-levels.js');
 const accessRights = require('./access-rights.js');
+const nestedResources = require('./nested-resources.js');
 const routes = require('./routes.js');
 
 /**
@@ -40,6 +41,7 @@ module.exports = (source, options) => {
   // Add custom middlewares.
   server.use(accessLevels(auth));
   server.use(accessRights(router.db));
+  server.use(nestedResources);
   server.use(routes);
 
   // Start server.

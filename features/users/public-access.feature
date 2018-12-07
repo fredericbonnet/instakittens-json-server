@@ -15,7 +15,7 @@ Scenario: Reading a User
    When I get the User "id"
    Then I should get the User "user"
   Given the User Id "id2" of the User "user"
-   Then the User Id "id2" should equal the User Id "id"
+   Then the Id "id2" should equal the Id "id"
 
 Scenario: Reading an unknown User
   Given an unknown User Id "id"

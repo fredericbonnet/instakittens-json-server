@@ -1,11 +1,19 @@
-Feature: Admin access : Photos
+Feature: Admin access : User Album Photos
 
   As an administrator
-  I want to access the Photos
+  I want to access User Album Photos
 
 Background:
   Given I am an administrator
     And I am identified
+  Given a User Id "user id" with albums
+   When I get the User "user id"
+   Then I should get the User "user"
+    And I open the User "user"
+  Given an existing public Album Id "album id"
+   When I get the Album "album id"
+   Then I should get the Album "album"
+    And I open the Album "album"
 
 Scenario: Getting the Photo list
    When I get the Photo list
@@ -17,6 +25,8 @@ Scenario: Reading a Photo
    Then I should get the Photo "photo"
   Given the Photo Id "id2" of the Photo "photo"
    Then the Id "id2" should equal the Id "id"
+  Given the Album Id "album id2" of the Photo "photo"
+   Then the Id "album id2" should equal the Id "album id"
 
 Scenario: Reading an unknown Photo
   Given an unknown Photo Id "id"
@@ -27,11 +37,12 @@ Scenario: Creating a Photo
   Given a new Photo "new photo" 
    When I create the Photo "new photo"
    Then the Photo should be created as "photo" 
-    And the Photo "new photo" should equal the Photo "photo"
+  Given the Album Id "album id2" of the Photo "photo"
+   Then the Id "album id2" should equal the Id "album id"
   Given the Photo Id "id" of the Photo "photo"
    When I get the Photo "id"
    Then I should get the Photo "photo"
-    And the Photo "new photo" should equal the Photo "photo"
+    And the Photo "photo" should include the Photo "new photo"
 
 Scenario: Creating an existing Photo
   Given an existing Photo Id "id"
@@ -46,6 +57,8 @@ Scenario: Updating a Photo
    When I update the Photo "id" with "updated photo" 
    Then the Photo should be updated as "photo"
     And the Photo "photo" should include the Photo "updated photo"
+  Given the Album Id "album id2" of the Photo "photo"
+   Then the Id "album id2" should equal the Id "album id"
    When I get the Photo "id"
    Then I should get the Photo "photo"
     And the Photo "photo" should include the Photo "updated photo"
@@ -61,10 +74,12 @@ Scenario: Replacing a Photo
     And a new Photo "replaced photo"
    When I replace the Photo "id" with "replaced photo" 
    Then the Photo should be replaced as "photo"
-    And the Photo "photo" should equal the Photo "replaced photo"
+    And the Photo "photo" should include the Photo "replaced photo"
+  Given the Album Id "album id2" of the Photo "photo"
+   Then the Id "album id2" should equal the Id "album id"
    When I get the Photo "id"
    Then I should get the Photo "photo"
-    And the Photo "photo" should equal the Photo "replaced photo"
+    And the Photo "photo" should include the Photo "replaced photo"
 
 Scenario: Replacing an unknown Photo 
   Given an unknown Photo Id "id"
