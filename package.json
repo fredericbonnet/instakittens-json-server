@@ -20,7 +20,7 @@
     "e2e": "mocha --opts e2e/mocha.opts --exit",
     "e2e:watch": "mocha --opts e2e/mocha.opts -w",
     "cucumber": "cucumber-js",
-    "cucumber:watch": "nodemon -e js,feature -x npm run cucumber"
+    "cucumber:watch": "nodemon -e js,feature -x npx cucumber-js --profile watch"
   },
   "dependencies": {
     "base-64": "^0.1.0",
