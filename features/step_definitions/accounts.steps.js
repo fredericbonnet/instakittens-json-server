@@ -1,4 +1,5 @@
 const { Given } = require('cucumber');
+
 const { buildHeader, getAccount } = require('../../e2e/utils');
 
 Given('I am not identified', function() {

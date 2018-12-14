@@ -1,10 +1,5 @@
 const { Given, When, Then } = require('cucumber');
 
-const chai = require('chai');
-const chaiExclude = require('chai-exclude');
-chai.use(chaiExclude);
-const { expect } = chai;
-const supertest = require('supertest');
 const { getRandomElement, getPhotoList } = require('../../e2e/utils');
 
 // Photo list

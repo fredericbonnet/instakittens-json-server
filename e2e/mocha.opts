@@ -1,3 +1,5 @@
 --timeout 5000
 --file e2e/init.js
+--file e2e/assertions.js
+--file e2e/supertest.js
 e2e/*.spec.js

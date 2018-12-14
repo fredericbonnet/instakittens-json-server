@@ -1,2 +1,4 @@
 node_modules
 @rerun.txt
+cypress/screenshots
+cypress/videos

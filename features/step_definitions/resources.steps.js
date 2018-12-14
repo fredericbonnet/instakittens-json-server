@@ -1,8 +1,5 @@
 const { Then } = require('cucumber');
 
-const chai = require('chai');
-const { expect } = chai;
-
 Then('the operation is unauthorized', async function() {
   this.response = await this.request.expect(401);
 });

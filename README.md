@@ -19,7 +19,8 @@ Powered by [JSON Server](https://github.com/typicode/json-server).
 
 ## Tests
 
-- Test frameworks: [Mocha](https://mochajs.org/), [Cucumber-js](https://github.com/cucumber/cucumber-js)
+- Test frameworks: [Mocha](https://mochajs.org/),
+  [Cucumber-js](https://github.com/cucumber/cucumber-js), [Cypress](https://www.cypress.io/)
 - Assertion library: [Chai](https://www.chaijs.com/)
 - E2E testing: [Supertest](https://github.com/visionmedia/supertest)
 - Mocking: [Sinon](https://sinonjs.org/), [Sinon-Chai](https://github.com/domenic/sinon-chai), [node-mocks-http](https://github.com/howardabrams/node-mocks-http), [mock-require](https://github.com/boblauer/mock-require)

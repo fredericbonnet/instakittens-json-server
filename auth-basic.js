@@ -31,7 +31,7 @@ module.exports = function(req, res, next) {
     if (!account || account.password !== password) throw 'authentication_error';
 
     // Remember auth info for further processing.
-    res.locals.auth = { ...account };
+    res.locals.auth = Object.assign({}, account);
 
     return next();
   } catch (e) {
