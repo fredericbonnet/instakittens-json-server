@@ -1,9 +1,13 @@
 /*
  * Cypress plugin initialization.
  */
+const cucumber = require('cypress-cucumber-preprocessor').default;
 const server = require('./test-server');
 
 module.exports = (on, config) => {
+  // Register Cucumber feature preprocessor.
+  on('file:preprocessor', cucumber());
+
   // Register tasks.
   on('task', {
     // Retrieve the DB object in the test context.

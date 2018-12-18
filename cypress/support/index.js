@@ -23,3 +23,6 @@ import './commands';
 // which will globally modify chai
 // and make these accessible to all specs
 import './assertions';
+
+// Import Cucumber-specific commands
+import './cucumber';
