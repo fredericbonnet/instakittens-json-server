@@ -1,6 +1,10 @@
 /*
  * Server init script.
  */
+const express = require('express');
+
+/* Express app. */
+const app = express();
 
 /** Config file. */
 const config = require('./json-server.json');
@@ -19,9 +23,17 @@ if (fresh) {
   source = './db.json';
 }
 
-/* Start server. */
-const { server } = require('./server')(source, config);
-const listener = server.listen(config.port, () => {
+// Create the JSON server.
+const { server, router } = require('./server')(source, config);
+
+if (fresh) {
+  // Fresh mode also activates the snapshots middleware.
+  app.use('/snapshots', require('./snapshots')(router.db));
+}
+
+// Start the app.
+app.use(server);
+const listener = app.listen(config.port, () => {
   const url = `http://localhost:${listener.address().port}`;
   console.log(`Server listening on ${url}`);
 });
