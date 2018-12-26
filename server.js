@@ -3,9 +3,6 @@
  */
 const jsonServer = require('json-server');
 
-/** Config file. */
-const config = require('./json-server.json');
-
 /** Middlewares. */
 const auth = require('./auth-basic');
 const accessLevels = require('./access-levels.js');
@@ -17,11 +14,12 @@ const routes = require('./routes.js');
  * Start server.
  *
  * @param {*} source Source DB (JSON file, JS module, object...)
- * @param {*} options JSON-Server options
+ * @param {*} config JSON-Server configuration
+ * @param {*} options JSON-Server default options
  *
- * @returns Promise with the server listener and the JSON-server router
+ * @returns the JSON server and router
  */
-module.exports = (source, options) => {
+module.exports = (source, config, options) => {
   // Create server app.
   const server = jsonServer.create();
 
@@ -46,10 +44,5 @@ module.exports = (source, options) => {
 
   // Start server.
   server.use(router);
-
-  return new Promise(resolve => {
-    const listener = server.listen(config.port, () => {
-      resolve({ listener, router });
-    });
-  });
+  return { server, router };
 };

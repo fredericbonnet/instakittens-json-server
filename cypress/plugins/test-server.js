@@ -32,15 +32,17 @@ function start(serverUrl) {
     // Choose random port.
     config.port = 0;
   }
-  mockRequire('../../json-server.json', config);
 
   // (Re)start server.
-  const server = require('../../server.js');
-  return server(source, { logger: false }).then(({ listener, router }) => {
-    const url = `http://localhost:${listener.address().port}`;
-    console.log(`E2E test server listening on ${url}`);
-
-    return { db: source, accounts, router, listener, url };
+  const { server, router } = require('../../server.js')(source, config, {
+    logger: false,
+  });
+  return new Promise(resolve => {
+    const listener = server.listen(config.port, () => {
+      const url = `http://localhost:${listener.address().port}`;
+      console.log(`E2E test server listening on ${url}`);
+      resolve({ db: source, accounts, router, listener, url });
+    });
   });
 }
 

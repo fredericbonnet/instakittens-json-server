@@ -2,10 +2,16 @@
  * Server init script.
  */
 
-const [, , ...args] = process.argv;
+/** Config file. */
+const config = require('./json-server.json');
 
+/** Command line arguments. */
+const [, , ...args] = process.argv;
+const fresh = args.includes('--fresh');
+
+/** Data source. */
 let source;
-if (args.includes('--fresh')) {
+if (fresh) {
   // In-memory, fresh DB.
   source = require('./db')();
 } else {
@@ -13,9 +19,9 @@ if (args.includes('--fresh')) {
   source = './db.json';
 }
 
-const server = require('./server');
-
-server(source).then(({ listener }) => {
+/* Start server. */
+const { server } = require('./server')(source, config);
+const listener = server.listen(config.port, () => {
   const url = `http://localhost:${listener.address().port}`;
   console.log(`Server listening on ${url}`);
 });
