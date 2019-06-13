@@ -24,3 +24,83 @@ Powered by [JSON Server](https://github.com/typicode/json-server).
 - Assertion library: [Chai](https://www.chaijs.com/)
 - E2E testing: [Supertest](https://github.com/visionmedia/supertest)
 - Mocking: [Sinon](https://sinonjs.org/), [Sinon-Chai](https://github.com/domenic/sinon-chai), [node-mocks-http](https://github.com/howardabrams/node-mocks-http), [mock-require](https://github.com/boblauer/mock-require)
+
+## NPM Scripts
+
+### Serving the app
+
+Start the development server on port 3000 with persistent data in `db.json`:
+
+```sh
+npm run start
+```
+
+Start the development server on port 3000 with non-persistent, fresh data from `db.json`:
+
+```sh
+npm run start:fresh
+```
+
+Start the development server on port 3000 in watch and fresh mode:
+
+```sh
+npm run watch
+```
+
+### Unit tests
+
+Run unit tests once:
+
+```sh
+npm run test
+```
+
+Run unit tests in watch mode:
+
+```sh
+npm run test:watch
+```
+
+### End-to-end tests
+
+End-to-end tests will spawn their own server instance on a random port.
+
+### Supertest
+
+Run Supertest tests once:
+
+```sh
+npm run e2e
+```
+
+Run Supertest tests in watch mode:
+
+```sh
+npm run e2e:watch
+```
+
+Run Supertest Cucumber scenarios once:
+
+```sh
+npm run cucumber
+```
+
+Run Supertest Cucumber scenarios in watch mode:
+
+```sh
+npm run cucumber:watch
+```
+
+#### Cypress
+
+Run Cypress tests & scenarios once:
+
+```sh
+npm run cypress:run
+```
+
+Open Cypress GUI:
+
+```sh
+npm run cypress:open
+```
