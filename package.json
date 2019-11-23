@@ -27,22 +27,22 @@
   },
   "dependencies": {
     "base-64": "^0.1.0",
-    "body-parser": "^1.18.3",
-    "json-server": "^0.14.0"
+    "body-parser": "^1.19.0",
+    "json-server": "^0.15.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chai-exclude": "^1.0.11",
-    "cucumber": "^5.0.2",
+    "chai-exclude": "^2.0.2",
+    "cucumber": "^6.0.5",
     "cypress": "^3.6.1",
     "cypress-cucumber-preprocessor": "^1.16.2",
-    "mocha": "^5.2.0",
-    "mock-require": "^3.0.2",
-    "node-mocks-http": "^1.7.3",
+    "mocha": "^6.2.2",
+    "mock-require": "^3.0.3",
+    "node-mocks-http": "^1.8.0",
     "nodemon": "^2.0.1",
-    "sinon": "^7.1.1",
-    "sinon-chai": "^3.2.0",
-    "supertest": "^3.3.0"
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
+    "supertest": "^4.0.2"
   },
   "nodemonConfig": {
     "ignore": [
