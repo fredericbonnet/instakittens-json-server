@@ -7,7 +7,7 @@ const mockRequire = require('mock-require');
 const base64 = require('base-64');
 
 // Mock accounts DB before including module to test.
-mockRequire('../accounts.json', [
+mockRequire('../data/accounts.json', [
   {
     userId: 1234,
     username: 'mockuser',
@@ -95,4 +95,4 @@ describe('Basic authentication middleware', () => {
 });
 
 // Stop mocking accounts DB.
-mockRequire.stop('../accounts.json');
+mockRequire.stop('../data/accounts.json');

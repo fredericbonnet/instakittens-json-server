@@ -17,11 +17,11 @@ const url = require('url');
  */
 function start(serverUrl) {
   // Data source: load default DB in-memory.
-  const source = require('../../db')(true);
+  const source = require('../../data/db')(true);
 
   // Mock accounts DB.
   const accounts = require('../fixtures/test-accounts.json');
-  mockRequire('../../accounts.json', accounts);
+  mockRequire('../../data/accounts.json', accounts);
 
   // Load & override server config.
   const config = require('../../json-server.json');

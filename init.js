@@ -17,10 +17,10 @@ const fresh = args.includes('--fresh');
 let source;
 if (fresh) {
   // In-memory, fresh DB.
-  source = require('./db')();
+  source = require('./data/db')();
 } else {
   // Persistent DB.
-  source = './db.json';
+  source = './data/db.json';
 }
 
 // Create the JSON server.
