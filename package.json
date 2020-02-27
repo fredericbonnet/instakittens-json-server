@@ -12,8 +12,8 @@
     "url": "https://github.com/fredericbonnet/instakittens-json-server.git"
   },
   "scripts": {
-    "start": "node init.js",
-    "start:fresh": "node init.js --fresh",
+    "start": "node src/init.js",
+    "start:fresh": "node src/init.js --fresh",
     "watch": "nodemon -x npm run start:fresh",
     "test": "mocha",
     "test:watch": "mocha -w",

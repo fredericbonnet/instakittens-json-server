@@ -24,7 +24,7 @@ function start(serverUrl) {
   mockRequire('../data/accounts.json', accounts);
 
   // Load & override server config.
-  const config = require('../json-server.json');
+  const config = require('../src/json-server.json');
   if (serverUrl) {
     // Use given port.
     config.port = url.parse(serverUrl).port;
@@ -34,7 +34,7 @@ function start(serverUrl) {
   }
 
   // (Re)start server.
-  const { server, router } = require('../server.js')(source, config, {
+  const { server, router } = require('../src/server.js')(source, config, {
     logger: false,
   });
   return new Promise(resolve => {

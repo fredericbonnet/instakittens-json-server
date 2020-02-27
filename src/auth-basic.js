@@ -8,7 +8,7 @@
 const base64 = require('base-64');
 
 /** Accounts database */
-const accounts = require('./data/accounts.json');
+const accounts = require('../data/accounts.json');
 
 /**
  * Express middleware function.

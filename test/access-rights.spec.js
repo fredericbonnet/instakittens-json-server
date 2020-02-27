@@ -5,7 +5,7 @@ const sinon = require('sinon');
 chai.use(require('sinon-chai'));
 
 /** Module to test. */
-const accessRights = require('../access-rights.js');
+const accessRights = require('../src/access-rights.js');
 
 /**
  * Utility proc to test resource access.

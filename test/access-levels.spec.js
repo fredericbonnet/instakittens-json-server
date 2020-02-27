@@ -5,7 +5,7 @@ const sinon = require('sinon');
 chai.use(require('sinon-chai'));
 
 /** Module to test. */
-const accessLevels = require('../access-levels.js');
+const accessLevels = require('../src/access-levels.js');
 
 /**
  * Utility proc to test accepted methods

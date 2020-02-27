@@ -1,6 +1,7 @@
 /*
  * Server init script.
  */
+const path = require('path');
 const express = require('express');
 
 /* Express app. */
@@ -17,10 +18,10 @@ const fresh = args.includes('--fresh');
 let source;
 if (fresh) {
   // In-memory, fresh DB.
-  source = require('./data/db')();
+  source = require('../data/db')();
 } else {
   // Persistent DB.
-  source = './data/db.json';
+  source = path.join(__dirname, '../data/db.json');
 }
 
 // Create the JSON server.

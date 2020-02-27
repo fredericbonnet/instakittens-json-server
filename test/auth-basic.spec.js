@@ -17,7 +17,7 @@ mockRequire('../data/accounts.json', [
 ]);
 
 /** Module to test. */
-const auth = mockRequire.reRequire('../auth-basic.js');
+const auth = mockRequire.reRequire('../src/auth-basic.js');
 
 /** Build Basic authentication header */
 function buildHeader(username, password) {
